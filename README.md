@@ -9,7 +9,8 @@
 
 
 ### Examples:
-```$ python3 ip.py
+```
+$ python3 ip.py
 
 
 ████▄    ▄   ▄█ ████▄    ▄
