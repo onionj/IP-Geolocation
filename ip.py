@@ -3,16 +3,15 @@ from json import loads
 from requests import get, post
 from sys import exit
 
-# USAGE:
-# `pip install requests`
-# `python3 ip.py`
+# Usage:
+#   - [ ] `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+#   - [ ] `python3 ip.py` 
 
-# ONIONj :)
 
-# free IP Geolocation
-# get your free api key as https://ipstack.com/signup/free  10.000 requests / mo
-# my api key:
-TOKEN = 'ba8484c0c2706202049aa0bab48e9b9e'
+
+# Get your free API key [here](https://ipstack.com/signup/free) and replace it in the code or use my key :)
+# # my api key:
+api_key = 'ba8484c0c2706202049aa0bab48e9b9e'
 
 banner = '''
 
@@ -30,7 +29,7 @@ def identify(target_ip):
     Target identification
     '''
     try:
-        data = f'http://api.ipstack.com/{target_ip}?access_key={TOKEN}&format=1' 
+        data = f'http://api.ipstack.com/{target_ip}?access_key={api_key}&format=1' 
         res = get(url = data)
         jtext = res.text
         jtext = loads(jtext)
