@@ -36,9 +36,9 @@
       
       
 ```
-##Get your free API key [here](https://ipstack.com/signup/free) and replace it in the code or use my key :)
+### Get your free API key [here](https://ipstack.com/signup/free) and replace it in the code or use my key :)
 
 
 ### Usage:
-  [ ].`pip install -r requirements.txt`
-  [ ].`python3 ip.py` 
+  - [ ] `pip install -r requirements.txt`
+  - [ ] `python3 ip.py` 
