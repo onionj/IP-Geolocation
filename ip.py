@@ -54,15 +54,15 @@ def identify(target_ip):
 
         print(f'''
         ______________________
-        |IP:                  {ip_type} {ip} 
-        |Continent:           {continent_code} {continent_name}
-        |Country:             {country_code} {country_name}
-        |Region:              {region_code} {region_name}
+        |IP:                  {ip_type:30} {ip} 
+        |Continent:           {continent_code:30} {continent_name}
+        |Country:             {country_code:30} {country_name}
+        |Region:              {region_code:30} {region_name}
         |City:                {city}
         |latitude:            {latitude}
         |longitude:           {longitude}
         |Capital:             {capital}
-        |language:            {language_code} {language_name}
+        |language:            {language_code:30} {language_name}
         |calling code:        {calling_code}
         |Flag photo link:     {flag_pic}
         -----------------------
