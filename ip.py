@@ -2,7 +2,9 @@
 from json import loads
 from requests import get, post
 from sys import exit
-
+from time import sleep
+from termcolor import colored
+from random import choice
 # Usage:
 #   - [ ] `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 #   - [ ] `python3 ip.py` 
@@ -22,6 +24,18 @@ banner = '''
       █  █ █  ▐ oNion █  █ █
       █   ██          █   ██ IP Geolocation
 '''
+
+def print_banner_epic():
+    global banner
+    color_name = ['red', 'yellow', 'blue', 'magenta', 'cyan', 'white'] #'green' , 'grey', 
+    banner_line = list(banner.split('\n'))
+
+    for line in banner_line:
+        for word in line:
+            print(colored(word, color=choice(color_name)), end='')
+            #sleep(.0001)
+        print()
+        
 
 
 def identify(target_ip):
@@ -51,18 +65,18 @@ def identify(target_ip):
         language_code = jtext['location']['languages'][0]['code']
         language_name = jtext['location']['languages'][0]['name']
         flag_pic = f'http://assets.ipstack.com/flags/{country_code.lower()}.svg'
-
+        
         print(f'''
         ______________________
-        |IP:                  {ip_type:30} {ip} 
-        |Continent:           {continent_code:30} {continent_name}
-        |Country:             {country_code:30} {country_name}
-        |Region:              {region_code:30} {region_name}
+        |IP:                  {ip_type:20} {ip} 
+        |Continent:           {continent_code:20} {continent_name}
+        |Country:             {country_code:20} {country_name}
+        |Region:              {region_code:20} {region_name}
         |City:                {city}
         |latitude:            {latitude}
         |longitude:           {longitude}
         |Capital:             {capital}
-        |language:            {language_code:30} {language_name}
+        |language:            {language_code:20} {language_name}
         |calling code:        {calling_code}
         |Flag photo link:     {flag_pic}
         -----------------------
@@ -124,11 +138,13 @@ def getmyip():
             
             ### enough!
             except:
-                print('[!] Three attempts from three different servers to get IP failed. Are you connected to the Internet?')
+                print('[!] Three attempts from three different servers'
+                ' to get IP failed. Are you connected to the Internet?')
                 return '0.0.0.0 the earth!'
 
 
 if __name__ == '__main__':
+    # print_banner_epic()
     print(banner)
     # just print Your own public IP
     print(f'[+] youre ip:\n{getmyip()}\n')
