@@ -3,8 +3,8 @@ from json import loads
 from requests import get, post
 from sys import exit
 from time import sleep
-from termcolor import colored
 from random import choice
+# from termcolor import colored
 # Usage:
 #   - [ ] `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 #   - [ ] `python3 ip.py` 
