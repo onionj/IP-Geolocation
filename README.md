@@ -4,8 +4,8 @@
 
 
 ## Usage:
-  - [ ] `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
-  - [ ] `python3 ip.py` 
+  -  `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+  -  `python3 ip.py` 
 
 
 ### Examples:
